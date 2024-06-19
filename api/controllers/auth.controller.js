@@ -4,6 +4,7 @@ import User from "../models/user.model.js";
 import bcryptjs from 'bcryptjs';
 import errorHandler from "../utils/error.js";
 import jwt from 'jsonwebtoken';
+
 const signup = async (req , res , next) => {
 
     // console.log(req.body);
@@ -14,7 +15,7 @@ const signup = async (req , res , next) => {
     try{
         await newUser.save()
 
-    res.status(201).json('user created Successfully!!');
+        res.status(201).json('user created Successfully!!');
 
     } catch(error){
         // res.status(500).json(error.message);
