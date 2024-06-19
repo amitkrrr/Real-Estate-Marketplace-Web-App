@@ -6,6 +6,8 @@ import persistStore from 'redux-persist/es/persistStore';
 
 const rootReducer = combineReducers({user: userReducer});
 
+// redux persist to store user data in local storage
+
 const persistConfig = {
   key: 'root',
   storage,
