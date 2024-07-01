@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ListingItem from '../components/ListingItem';
 
 
 export default function Search() {
@@ -17,7 +18,7 @@ export default function Search() {
   const [loading, setLoading] = useState(false);
   const [listings, setListings] = useState([]);
   
-  console.log(listings);
+
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -228,7 +229,11 @@ export default function Search() {
             </p>
           )}
 
-          
+          {!loading &&
+            listings &&
+            listings.map((listing) => (
+              <ListingItem key={listing._id} listing={listing} />
+            ))}
 
           
             <button
