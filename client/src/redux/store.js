@@ -16,7 +16,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig , rootReducer);
 
-// persisted reducer store previous user data globally after refresh , without it after refreshing user goes signout and again required to signin
+
 
 export const store = configureStore({
   // reducer: {user: userReducer},
