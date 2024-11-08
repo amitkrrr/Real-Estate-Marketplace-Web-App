@@ -6,7 +6,7 @@ export default defineConfig({
   server:{
     proxy: {
       '/api': {
-        target: 'http://localhost:3000', // each time address start or includes '/api' add localhost3000 at the begininig
+        target: 'http://localhost:3000', // each time address start or includes '/api' add localhost:3000 at the begininig
         secure: false,
     },
   },
